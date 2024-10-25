@@ -14,6 +14,31 @@
 
 </head>
 <body>
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("burgerMenu");
+        const btn = document.getElementById('toggleBtn');
+        menu.classList.toggle("open");
+        if (menu.classList.contains("open")){
+            btn.src = 'images/Vector12.png';
+            btn.style.position = 'fixed';
+        } else {
+            btn.src = 'images/Vector11.png';
+            btn.style.position = 'static';
+        }
+    }
+
+</script>
+<div class="burger-menu" id="burgerMenu">
+    <ul class="menu-list" id="menuList">
+        <li><a href="#link1">О книге</a></li>
+        <li><a href="#link2">Правила</a></li>
+        <li><a href="#link3">Об авторе</a></li>
+        <li><a href="#link4">Покупка</a></li>
+        <li><a href="#link5">Вопросы и ответы</a></li>
+        <li><a href="#link6">Обратная связь</a></li>
+    </ul>
+</div>
 <section class="section1">
     <div class="sectionContentWrapper">
         <header>
@@ -31,46 +56,54 @@
                     <img class="headerImg" src="images/Vector.png" alt="img">
                     <button class="section1HeaderBtn">КУПИТЬ КНИГУ</button>
                 </div>
+                <div class="burgerMenuIcon">
+                    <img id="toggleBtn" onclick="toggleMenu()" src="images/Vector11.png" alt="img">
+                </div>
+
             </div>
         </header>
+
         <div class="section1Content">
             <div class="section1ContentTextWrapper">
-                <img class="headerImg" src="images/Vector1.png" alt="img">
+                <img class="headerImgBg" src="images/Vector1.png" alt="img">
                 <h2>ДЖОКЕР</h2>
                 <h1>Настоящая политическая биография Владимира Зеленского</h1>
             </div>
             <div class="btnMoreWrapper">
-                <a href="#" class="btnMore">ПОДРОБНЕЕ</a>
+                <a href="#section2" class="btnMore">ПОДРОБНЕЕ</a>
                 <img class="headerImgArrow" src="images/Vector3.png" alt="">
             </div>
         </div>
     </div>
 </section>
-<section class="section2">
-    <div class="section2ImgWrapper">
-        <img class="section2ImgWrapperImg1" src="images/Vector4.png" alt="">
-        <img class="section2ImgWrapperImg2" src="images/BookMockup1.png" alt="">
-    </div>
-    <div class="section2TextWrapper">
-        <h3>Предлагаем вашему вниманию новую
-            монографию Константина Бондаренко -
-        </h3>
-        <h2>ДЖОКЕР</h2>
-        <h4>Настоящая биография Владимира Зеленского</h4>
-        <img class="" src="images/Vector5.png" alt="">
-        <p>В книге раскрывается не только политический и психологический
-            портрет нынешнего президента Украины. Автор исследует
-            политические процессы 10 20-х годов XXI века: Майдан,
-            постмайданное время, избирательные кампании, противостояние на
-            Донбассе, Минский процесс, подготовку к войне, сам ход войны.
-            <br><br>
-            Он дает характеристики ключевым игрокам и событиям, расследует
-            хитросплетения политических интриг и объясняет закономерности
-            событий.
-            <br><br>
-            Книга будет интересна и полезна всем, кто изучает новейшую
-            историю Украины и хочет более глубоко вникнуть в происходящее в
-            последние годы.</p>
+
+<section class="section2" id="section2">
+    <div class="sectionContentWrapper">
+        <div class="section2ImgWrapper">
+            <img class="section2ImgWrapperImg1" src="images/Vector4.png" alt="">
+            <img class="section2ImgWrapperImg2" src="images/BookMockup1.png" alt="">
+        </div>
+        <div class="section2TextWrapper">
+            <h3>Предлагаем вашему вниманию новую
+                монографию Константина Бондаренко -
+            </h3>
+            <h2>ДЖОКЕР</h2>
+            <h4>Настоящая биография Владимира Зеленского</h4>
+            <img class="" src="images/Vector5.png" alt="">
+            <p>В книге раскрывается не только политический и психологический
+                портрет нынешнего президента Украины. Автор исследует
+                политические процессы 10 20-х годов XXI века: Майдан,
+                постмайданное время, избирательные кампании, противостояние на
+                Донбассе, Минский процесс, подготовку к войне, сам ход войны.
+                <br><br>
+                Он дает характеристики ключевым игрокам и событиям, расследует
+                хитросплетения политических интриг и объясняет закономерности
+                событий.
+                <br><br>
+                Книга будет интересна и полезна всем, кто изучает новейшую
+                историю Украины и хочет более глубоко вникнуть в происходящее в
+                последние годы.</p>
+        </div>
     </div>
 </section>
 <section class="section3">
@@ -161,7 +194,10 @@
                         предзаказа</a>
                 </div>
             </div>
-            <img class="section5ContentPhoto_books" src="images/Group_28.png" alt="img">
+            <div class="section5ContentPhoto_booksWrapper">
+                <img class="price" src="images/price.png" alt="img">
+                <img class="section5ContentPhoto_books" src="images/Group_28.png" alt="img">
+            </div>
         </div>
         <div class="section5BtnWrapper">
             <img class="" src="images/Vector9.png" alt="">
@@ -177,28 +213,24 @@
                 <img src="images/Vector10.png" alt="img">
             </div>
             <div class="section6ContentCart1">
-                <img src="#" alt="img">
-                <h4 class="section6ContentCart1Title">Как я получу свою книгу после
-                    покупки?</h4>
+                <div class="section6ContentCart1Title">
+                    <img src="images/Group9.png" alt="img">
+                    <h4 class="section6ContentCart1Title">Как я получу свою книгу после
+                        покупки?</h4>
+                </div>
                 <p class="section6ContentCart1Text">После покупки книга автоматически придет вам на
                     указанную при оформлении заказа электронную почту.
                     Туда же придет и чек об оплате книги.</p>
             </div>
             <div class="section6ContentCart2">
-                <img src="#" alt="img">
-                <h4 class="section6ContentCart1Title">Что делать, если на указанный
-                    адрес электронной почты книга
-                    не пришла?</h4>
-                <p class="section6ContentCart1Text">Обратитесь, пожалуйста, в службу поддержки
-                    <a href="#" target="_blank">mailforquestions@mail.com</a></p>
-            </div>
-            <div class="section6ContentCart3">
-                <img src="#" alt="img">
-                <h4 class="section6ContentCart1Title">Планируется ли печатная
-                    версия книги?</h4>
-                <p class="section6ContentCart1Text">В наших планах выпустить печатную версию книги.
-                    Также книгой заинтересовались несколько зарубежных
-                    издательств.</p>
+                <div class="section6ContentCart2Title">
+                    <img src="images/Group10.png" alt="img">
+                    <h4 class="section6ContentCart1Title">Что делать, если на указанный
+                        адрес электронной почты книга
+                        не пришла?</h4>
+                </div>
+                <p class="section6ContentCart2Text">Обратитесь, пожалуйста, в службу поддержки
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jokerzbook@gmail.com" target="_blank">jokerzbook@gmail.com</a></p>
             </div>
         </div>
         <div class="formWrapper">
@@ -234,9 +266,10 @@
     <div class=" sectionContentWrapper">
         <div class="footerLinks">
             <p>CЛУЖБА ПОДДЕРЖКИ:</p>
-            <a href="#" target="_blank">mailforquestions@mail.com</a>
-            <a href="#" target="_blank">+436607397295</a>
-            <a href="#" target="_blank">t.me/kobajulia</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jokerzbook@gmail.com" target="_blank">jokerzbook@gmail.com</a>
+            <a href="tel:+436607397295" target="_blank">+436607397295</a>
+            <a href="https://t.me/kobajulia" target="_blank">t.me/kobajulia</a>
+
         </div>
         <div class="footerDocsLinksWrapper">
             <a href="#" target="_blank">Политика конфидециальности</a>
