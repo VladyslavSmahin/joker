@@ -169,6 +169,13 @@ html {
       .section1ContentTextWrapper {
         position: relative;
         margin-bottom: 100px;
+
+        @media (min-width: 360px) and (max-width: 768px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
         @media (min-width: 360px) and (max-width: 1024px) {
           margin-bottom: calc(200px + (100 - 200) * ((100vw - 360px) / (1024 - 360)));
         }
@@ -183,6 +190,9 @@ html {
             left: calc(-10px + (-60 + 10) * ((100vw - 360px) / (1440 - 360)));
             max-width: calc(276px + (702 - 276) * ((100vw - 360px) / (1440 - 360)));;
           }
+          @media (min-width: 360px) and (max-width: 768px) {
+            left: calc(20px + (70 + 20) * ((100vw - 360px) / (768 - 360)));
+            }
         }
 
         h2 {
