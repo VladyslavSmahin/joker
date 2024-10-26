@@ -192,7 +192,7 @@ html {
           }
           @media (min-width: 360px) and (max-width: 768px) {
             left: calc(20px + (70 + 20) * ((100vw - 360px) / (768 - 360)));
-            }
+          }
         }
 
         h2 {
@@ -218,6 +218,7 @@ html {
         align-items: center;
         display: flex;
         flex-direction: column;
+        margin-top: 30px;
 
         .btnMore {
           background: none;
@@ -244,7 +245,9 @@ html {
       display: flex;
       @media (min-width: 360px) and (max-width: 1024px) {
         flex-direction: column;
+        align-items: center;
       }
+
       .section2ImgWrapper {
         position: relative;
         width: 50vw;
@@ -252,7 +255,7 @@ html {
         justify-content: center;
         align-items: center;
         @media (min-width: 360px) and (max-width: 1024px) {
-         order: 2;
+          order: 2;
         }
 
         .section2ImgWrapperImg1, {
@@ -260,6 +263,9 @@ html {
           top: 0;
           left: -70px;
           z-index: 0;
+          @media (min-width: 360px) and (max-width: 1024px) {
+            max-width: calc(320px + (600 - 320) * ((100vw - 360px) / (1024 - 360)));
+          }
         }
 
         .section2ImgWrapperImg2 {
@@ -267,6 +273,9 @@ html {
           z-index: 1;
           @media (min-width: 1024px) and (max-width: 1440px) {
             max-width: calc(375px + (434 - 375) * ((100vw - 1024px) / (1440 - 1024)));
+          }
+          @media (min-width: 360px) and (max-width: 1024px) {
+            max-width: calc(203px + (375 - 203) * ((100vw - 360px) / (1024 - 360)));
           }
         }
       }
@@ -276,17 +285,31 @@ html {
         z-index: 1;
         @media (min-width: 360px) and (max-width: 768px) {
           order: 1;
-          }
+        }
         @media (min-width: 1024px) and (max-width: 1440px) {
           max-width: calc(375px + (465 - 375) * ((100vw - 1024px) / (1440 - 1024)));
         }
+        @media (min-width: 360px) and (max-width: 1024px) {
+          max-width: calc(300px + (900 - 300) * ((100vw - 360px) / (1024 - 360)));
+        }
+
         h3 {
           font-size: 32px;
           font-style: italic;
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            max-width: calc(375px + (465 - 375) * ((100vw - 1024px) / (1440 - 1024)));
+          }
+          @media (min-width: 360px) and (max-width: 1024px) {
+            font-size: calc(18px + (32 - 18) * ((100vw - 360px) / (1024 - 360)));
+          }
         }
 
         h2 {
           font-size: 68px;
+
+          @media (min-width: 360px) and (max-width: 1024px) {
+            font-size: calc(44px + (68 - 44) * ((100vw - 360px) / (1024 - 360)));
+          }
         }
 
         h4 {
@@ -297,6 +320,10 @@ html {
         p {
           font-size: 18px;
           color: #D2D2D2;
+
+          @media (min-width: 360px) and (max-width: 1024px) {
+            font-size: calc(16px + (18 - 16) * ((100vw - 360px) / (1024 - 360)));
+          }
         }
       }
     }
@@ -307,7 +334,6 @@ html {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
     background-repeat: no-repeat;
     padding: 120px 0;
 
@@ -320,7 +346,9 @@ html {
         position: relative;
 
         img {
-
+          @media (min-width: 360px) and (max-width: 768px) {
+            max-width: calc(200px + (370 - 200) * ((100vw - 360px) / (1024 - 360)));
+          }
         }
 
         h3 {
@@ -330,6 +358,11 @@ html {
           position: absolute;
           top: 0;
           left: 60px;
+
+          @media (min-width: 360px) and (max-width: 768px) {
+            font-size: calc(33px + (44 - 33) * ((100vw - 360px) / (1024 - 360)));
+            left: 0;
+          }
         }
       }
 
@@ -337,11 +370,49 @@ html {
         display: flex;
         flex-wrap: wrap;
 
-        .section3ContentCart1, .section3ContentCart2 {
+        @media (min-width: 360px) and (max-width: 768px) {
+          justify-content: center;
+        }
+
+        .section3ContentCart1, {
           display: flex;
+          margin-bottom: 40px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            align-items: center;
+            flex-direction: column;
+          }
 
           img {
             margin-right: 28px;
+            @media (min-width: 360px) and (max-width: 768px) {
+              margin-bottom: 20px;
+            }
+          }
+
+          h4 {
+            font-family: "KyivTypeTitling", sans-serif;
+            color: #AC000A;
+            margin-bottom: 12px;
+          }
+
+          p {
+            max-width: 440px;
+          }
+        }
+
+        .section3ContentCart2 {
+          display: flex;
+          margin-bottom: 40px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            align-items: center;
+            flex-direction: column;
+          }
+
+          img {
+            margin-right: 28px;
+            @media (min-width: 360px) and (max-width: 768px) {
+              margin-bottom: 20px;
+            }
           }
 
           h4 {
@@ -356,11 +427,19 @@ html {
         }
 
         .section3ContentCart3 {
-          margin-top: 80px;
           display: flex;
+          @media (min-width: 360px) and (max-width: 768px) {
+            align-items: center;
+            flex-direction: column;
+          }
 
           img {
             margin-right: 28px;
+            max-width: 132px;
+            max-height: 132px;
+            @media (min-width: 360px) and (max-width: 768px) {
+              margin-bottom: 20px;
+            }
           }
 
           h4 {
@@ -381,22 +460,36 @@ html {
 
     .sectionContentWrapper {
       display: flex;
+      @media (min-width: 360px) and (max-width: 768px) {
+        flex-direction: column;
+      }
 
       .section4PhotoWrapper {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (min-width: 360px) and (max-width: 768px) {
+          order: 2;
+        }
 
         .section4Photo1 {
           position: absolute;
           left: -90px;
           bottom: 5px;
           z-index: 0;
+          @media (min-width: 360px) and (max-width: 768px) {
+            max-width: calc(300px + (685 - 300) * ((100vw - 360px) / (768 - 360)));
+            left: 0;
+          }
         }
 
         .section4Photo2 {
           z-index: 1;
+          @media (min-width: 360px) and (max-width: 768px) {
+            max-width: calc(312px + (605 - 312) * ((100vw - 360px) / (768 - 360)));
+
+          }
         }
 
         .section4ContentBtnWrapper {
@@ -415,6 +508,10 @@ html {
 
       .section4ContentText {
         padding-left: 43px;
+        @media (min-width: 360px) and (max-width: 768px) {
+          order: 1;
+          padding-left: 0;
+        }
 
         h4 {
           font-family: "KyivTypeTitling", sans-serif;
@@ -453,9 +550,21 @@ html {
         padding-top: 120px;
         display: flex;
         justify-content: center;
+        @media (min-width: 360px) and (max-width: 768px) {
+          max-width: calc(312px + (605 - 312) * ((100vw - 360px) / (768 - 360)));
+          padding-top: calc(60px + (120 - 60) * ((100vw - 360px) / (768 - 360)));
+          flex-direction: column;
+        }
 
         .section5ContentTextWrapper {
           padding-top: 80px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            padding-top: 0;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
 
           h3 {
             font-family: "KyivTypeTitling", sans-serif;
@@ -463,12 +572,19 @@ html {
             font-size: 44px;
             margin-bottom: 24px;
             max-width: 605px;
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(32px + (44 - 32) * ((100vw - 360px) / (768 - 360)));
+
+            }
           }
 
           p {
             font-size: 18px;
             max-width: 605px;
             margin-bottom: 33px;
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: 16px;
+            }
           }
 
           .section5ContentBtnWrapper {
@@ -505,6 +621,17 @@ html {
           .price {
             position: absolute;
             left: 100px;
+            @media (min-width: 360px) and (max-width: 768px) {
+              max-width: calc(120px + (180 - 120) * ((100vw - 360px) / (768 - 360)));
+              left: calc(0px + (100 - 0) * ((100vw - 360px) / (768 - 360)));
+
+            }
+          }
+
+          .section5ContentPhoto_books {
+            @media (min-width: 360px) and (max-width: 768px) {
+              max-width: calc(312px + (605 - 312) * ((100vw - 360px) / (768 - 360)));
+            }
           }
         }
       }
@@ -512,6 +639,15 @@ html {
       .section5BtnWrapper {
         position: relative;
         top: -60px;
+        @media (min-width: 360px) and (max-width: 768px) {
+          top: 0;
+        }
+
+        .btnFrame {
+          @media (min-width: 360px) and (max-width: 768px) {
+            max-width: calc(312px + (490 - 312) * ((100vw - 360px) / (768 - 360)));
+          }
+        }
 
         .section5Btn {
           position: absolute;
@@ -524,6 +660,11 @@ html {
           font-size: 18px;
           font-weight: bold;
           font-family: "PT Serif", sans-serif;
+          @media (min-width: 360px) and (max-width: 768px) {
+            font-size: calc(12px + (18 - 12) * ((100vw - 360px) / (768 - 360)));
+            top: calc(13px + (20 - 13) * ((100vw - 360px) / (768 - 360)));
+            left: calc(32px + (60 - 32) * ((100vw - 360px) / (768 - 360)));
+          }
         }
       }
     }
@@ -534,10 +675,16 @@ html {
     background: linear-gradient(to right, #370406, #040404);
     width: 100%;
     padding: 120px 0;
-
+    @media (min-width: 360px) and (max-width: 768px) {
+      padding-bottom: calc(60px + (120 - 60) * ((100vw - 360px) / (768 - 360)));
+      padding-top: calc(60px + (120 - 60) * ((100vw - 360px) / (768 - 360)));
+    }
     .sectionContentWrapper {
       display: flex;
       justify-content: space-between;
+      @media (min-width: 360px) and (max-width: 768px) {
+        flex-direction: column;
+      }
 
       .section6TextContent {
         .section6TextContentTitle {
@@ -551,12 +698,19 @@ html {
             position: relative;
             padding-left: 20px;
             z-index: 1;
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(33px + (44 - 33) * ((100vw - 360px) / (768 - 360)));
+            }
           }
 
           img {
             position: absolute;
             top: 20px;
             z-index: 0;
+            @media (min-width: 360px) and (max-width: 768px) {
+              max-width: calc(312px + (730 - 312) * ((100vw - 360px) / (768 - 360)));
+
+            }
           }
         }
 
@@ -569,6 +723,10 @@ html {
             align-items: center;
             font-size: 24px;
             font-weight: bold;
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(18px + (24 - 18) * ((100vw - 360px) / (768 - 360)));
+
+            }
           }
 
           img {
@@ -590,7 +748,10 @@ html {
             align-items: center;
             font-size: 24px;
             font-weight: bold;
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(18px + (24 - 18) * ((100vw - 360px) / (768 - 360)));
 
+            }
             img {
               margin-right: 16px;
             }
@@ -613,6 +774,10 @@ html {
             font-weight: bold;
             font-size: 22px;
             margin-bottom: 36px;
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(18px + (24 - 18) * ((100vw - 360px) / (768 - 360)));
+
+            }
           }
 
           .nameInput {
@@ -695,12 +860,20 @@ html {
     .sectionContentWrapper {
       display: flex;
       justify-content: space-between;
+      @media (min-width: 360px) and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
 
       .footerLinks {
         display: flex;
         justify-content: space-between;
         gap: 20px;
-
+        @media (min-width: 360px) and (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 20px;
+        }
         p {
           color: #754B4D;
         }

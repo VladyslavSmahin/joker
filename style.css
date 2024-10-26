@@ -218,6 +218,7 @@ html .section1 .section1Content .btnMoreWrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 html .section1 .section1Content .btnMoreWrapper .btnMore {
   background: none;
@@ -239,6 +240,7 @@ html .section2 .sectionContentWrapper {
 @media (min-width: 360px) and (max-width: 1024px) {
   html .section2 .sectionContentWrapper {
     flex-direction: column;
+    align-items: center;
   }
 }
 html .section2 .sectionContentWrapper .section2ImgWrapper {
@@ -259,6 +261,11 @@ html .section2 .sectionContentWrapper .section2ImgWrapper .section2ImgWrapperImg
   left: -70px;
   z-index: 0;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html .section2 .sectionContentWrapper .section2ImgWrapper .section2ImgWrapperImg1 {
+    max-width: calc(320px + 280 * (100vw - 360px) / 664);
+  }
+}
 html .section2 .sectionContentWrapper .section2ImgWrapper .section2ImgWrapperImg2 {
   max-width: 434px;
   z-index: 1;
@@ -266,6 +273,11 @@ html .section2 .sectionContentWrapper .section2ImgWrapper .section2ImgWrapperImg
 @media (min-width: 1024px) and (max-width: 1440px) {
   html .section2 .sectionContentWrapper .section2ImgWrapper .section2ImgWrapperImg2 {
     max-width: calc(375px + 59 * (100vw - 1024px) / 416);
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html .section2 .sectionContentWrapper .section2ImgWrapper .section2ImgWrapperImg2 {
+    max-width: calc(203px + 172 * (100vw - 360px) / 664);
   }
 }
 html .section2 .sectionContentWrapper .section2TextWrapper {
@@ -282,12 +294,32 @@ html .section2 .sectionContentWrapper .section2TextWrapper {
     max-width: calc(375px + 90 * (100vw - 1024px) / 416);
   }
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html .section2 .sectionContentWrapper .section2TextWrapper {
+    max-width: calc(300px + 600 * (100vw - 360px) / 664);
+  }
+}
 html .section2 .sectionContentWrapper .section2TextWrapper h3 {
   font-size: 32px;
   font-style: italic;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html .section2 .sectionContentWrapper .section2TextWrapper h3 {
+    max-width: calc(375px + 90 * (100vw - 1024px) / 416);
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html .section2 .sectionContentWrapper .section2TextWrapper h3 {
+    font-size: calc(18px + 14 * (100vw - 360px) / 664);
+  }
+}
 html .section2 .sectionContentWrapper .section2TextWrapper h2 {
   font-size: 68px;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html .section2 .sectionContentWrapper .section2TextWrapper h2 {
+    font-size: calc(44px + 24 * (100vw - 360px) / 664);
+  }
 }
 html .section2 .sectionContentWrapper .section2TextWrapper h4 {
   font-size: 22px;
@@ -297,12 +329,16 @@ html .section2 .sectionContentWrapper .section2TextWrapper p {
   font-size: 18px;
   color: #D2D2D2;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html .section2 .sectionContentWrapper .section2TextWrapper p {
+    font-size: calc(16px + 2 * (100vw - 360px) / 664);
+  }
+}
 html .section3 {
   background-image: url("images/section3back.png");
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
   background-repeat: no-repeat;
   padding: 120px 0;
 }
@@ -314,6 +350,11 @@ html .section3 .sectionContentWrapper {
 html .section3 .sectionContentWrapper .section3Title {
   position: relative;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3Title img {
+    max-width: calc(200px + 170 * (100vw - 360px) / 664);
+  }
+}
 html .section3 .sectionContentWrapper .section3Title h3 {
   font-family: "KyivTypeTitling", sans-serif;
   font-size: 44px;
@@ -322,30 +363,91 @@ html .section3 .sectionContentWrapper .section3Title h3 {
   top: 0;
   left: 60px;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3Title h3 {
+    font-size: calc(33px + 11 * (100vw - 360px) / 664);
+    left: 0;
+  }
+}
 html .section3 .sectionContentWrapper .section3ContentWrapper {
   display: flex;
   flex-wrap: wrap;
 }
-html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1, html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 {
-  display: flex;
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3ContentWrapper {
+    justify-content: center;
+  }
 }
-html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 img, html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 img {
+html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 img {
   margin-right: 28px;
 }
-html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 h4, html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 h4 {
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 img {
+    margin-bottom: 20px;
+  }
+}
+html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 h4 {
   font-family: "KyivTypeTitling", sans-serif;
   color: #AC000A;
   margin-bottom: 12px;
 }
-html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 p, html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 p {
+html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart1 p {
+  max-width: 440px;
+}
+html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 img {
+  margin-right: 28px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 img {
+    margin-bottom: 20px;
+  }
+}
+html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 h4 {
+  font-family: "KyivTypeTitling", sans-serif;
+  color: #AC000A;
+  margin-bottom: 12px;
+}
+html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart2 p {
   max-width: 440px;
 }
 html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart3 {
-  margin-top: 80px;
   display: flex;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart3 {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart3 img {
   margin-right: 28px;
+  max-width: 132px;
+  max-height: 132px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart3 img {
+    margin-bottom: 20px;
+  }
 }
 html .section3 .sectionContentWrapper .section3ContentWrapper .section3ContentCart3 h4 {
   font-family: "KyivTypeTitling", sans-serif;
@@ -360,11 +462,21 @@ html .section4 {
 html .section4 .sectionContentWrapper {
   display: flex;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section4 .sectionContentWrapper {
+    flex-direction: column;
+  }
+}
 html .section4 .sectionContentWrapper .section4PhotoWrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section4 .sectionContentWrapper .section4PhotoWrapper {
+    order: 2;
+  }
 }
 html .section4 .sectionContentWrapper .section4PhotoWrapper .section4Photo1 {
   position: absolute;
@@ -372,8 +484,19 @@ html .section4 .sectionContentWrapper .section4PhotoWrapper .section4Photo1 {
   bottom: 5px;
   z-index: 0;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section4 .sectionContentWrapper .section4PhotoWrapper .section4Photo1 {
+    max-width: calc(300px + 385 * (100vw - 360px) / 408);
+    left: 0;
+  }
+}
 html .section4 .sectionContentWrapper .section4PhotoWrapper .section4Photo2 {
   z-index: 1;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section4 .sectionContentWrapper .section4PhotoWrapper .section4Photo2 {
+    max-width: calc(312px + 293 * (100vw - 360px) / 408);
+  }
 }
 html .section4 .sectionContentWrapper .section4PhotoWrapper .section4ContentBtnWrapper {
   display: flex;
@@ -388,6 +511,12 @@ html .section4 .sectionContentWrapper .section4PhotoWrapper .section4ContentBtnW
 }
 html .section4 .sectionContentWrapper .section4ContentText {
   padding-left: 43px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section4 .sectionContentWrapper .section4ContentText {
+    order: 1;
+    padding-left: 0;
+  }
 }
 html .section4 .sectionContentWrapper .section4ContentText h4 {
   font-family: "KyivTypeTitling", sans-serif;
@@ -421,8 +550,24 @@ html .section5 .sectionContentWrapper .section5Content {
   display: flex;
   justify-content: center;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5Content {
+    max-width: calc(312px + 293 * (100vw - 360px) / 408);
+    padding-top: calc(60px + 60 * (100vw - 360px) / 408);
+    flex-direction: column;
+  }
+}
 html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper {
   padding-top: 80px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper {
+    padding-top: 0;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper h3 {
   font-family: "KyivTypeTitling", sans-serif;
@@ -431,10 +576,20 @@ html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapp
   margin-bottom: 24px;
   max-width: 605px;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper h3 {
+    font-size: calc(32px + 12 * (100vw - 360px) / 408);
+  }
+}
 html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper p {
   font-size: 18px;
   max-width: 605px;
   margin-bottom: 33px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper p {
+    font-size: 16px;
+  }
 }
 html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper .section5ContentBtnWrapper {
   display: flex;
@@ -466,9 +621,30 @@ html .section5 .sectionContentWrapper .section5Content .section5ContentPhoto_boo
   position: absolute;
   left: 100px;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5Content .section5ContentPhoto_booksWrapper .price {
+    max-width: calc(120px + 60 * (100vw - 360px) / 408);
+    left: calc(0px + 100 * (100vw - 360px) / 408);
+  }
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5Content .section5ContentPhoto_booksWrapper .section5ContentPhoto_books {
+    max-width: calc(312px + 293 * (100vw - 360px) / 408);
+  }
+}
 html .section5 .sectionContentWrapper .section5BtnWrapper {
   position: relative;
   top: -60px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5BtnWrapper {
+    top: 0;
+  }
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5BtnWrapper .btnFrame {
+    max-width: calc(312px + 178 * (100vw - 360px) / 408);
+  }
 }
 html .section5 .sectionContentWrapper .section5BtnWrapper .section5Btn {
   position: absolute;
@@ -482,14 +658,32 @@ html .section5 .sectionContentWrapper .section5BtnWrapper .section5Btn {
   font-weight: bold;
   font-family: "PT Serif", sans-serif;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section5 .sectionContentWrapper .section5BtnWrapper .section5Btn {
+    font-size: calc(12px + 6 * (100vw - 360px) / 408);
+    top: calc(13px + 7 * (100vw - 360px) / 408);
+    left: calc(32px + 28 * (100vw - 360px) / 408);
+  }
+}
 html .section6 {
   background: linear-gradient(to right, #370406, #040404);
   width: 100%;
   padding: 120px 0;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section6 {
+    padding-bottom: calc(60px + 60 * (100vw - 360px) / 408);
+    padding-top: calc(60px + 60 * (100vw - 360px) / 408);
+  }
+}
 html .section6 .sectionContentWrapper {
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section6 .sectionContentWrapper {
+    flex-direction: column;
+  }
 }
 html .section6 .sectionContentWrapper .section6TextContent .section6TextContentTitle {
   position: relative;
@@ -503,10 +697,20 @@ html .section6 .sectionContentWrapper .section6TextContent .section6TextContentT
   padding-left: 20px;
   z-index: 1;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section6 .sectionContentWrapper .section6TextContent .section6TextContentTitle h3 {
+    font-size: calc(33px + 11 * (100vw - 360px) / 408);
+  }
+}
 html .section6 .sectionContentWrapper .section6TextContent .section6TextContentTitle img {
   position: absolute;
   top: 20px;
   z-index: 0;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section6 .sectionContentWrapper .section6TextContent .section6TextContentTitle img {
+    max-width: calc(312px + 418 * (100vw - 360px) / 408);
+  }
 }
 html .section6 .sectionContentWrapper .section6TextContent .section6ContentCart1 {
   max-width: 500px;
@@ -517,6 +721,11 @@ html .section6 .sectionContentWrapper .section6TextContent .section6ContentCart1
   align-items: center;
   font-size: 24px;
   font-weight: bold;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section6 .sectionContentWrapper .section6TextContent .section6ContentCart1 .section6ContentCart1Title {
+    font-size: calc(18px + 6 * (100vw - 360px) / 408);
+  }
 }
 html .section6 .sectionContentWrapper .section6TextContent .section6ContentCart1 img {
   margin-right: 16px;
@@ -533,6 +742,11 @@ html .section6 .sectionContentWrapper .section6TextContent .section6ContentCart2
   align-items: center;
   font-size: 24px;
   font-weight: bold;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section6 .sectionContentWrapper .section6TextContent .section6ContentCart2 .section6ContentCart2Title {
+    font-size: calc(18px + 6 * (100vw - 360px) / 408);
+  }
 }
 html .section6 .sectionContentWrapper .section6TextContent .section6ContentCart2 .section6ContentCart2Title img {
   margin-right: 16px;
@@ -551,6 +765,11 @@ html .section6 .sectionContentWrapper .formWrapper form h3 {
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 36px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section6 .sectionContentWrapper .formWrapper form h3 {
+    font-size: calc(18px + 6 * (100vw - 360px) / 408);
+  }
 }
 html .section6 .sectionContentWrapper .formWrapper form .nameInput {
   height: 68px;
@@ -619,10 +838,23 @@ html footer .sectionContentWrapper {
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html footer .sectionContentWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 html footer .sectionContentWrapper .footerLinks {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html footer .sectionContentWrapper .footerLinks {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
 html footer .sectionContentWrapper .footerLinks p {
   color: #754B4D;
