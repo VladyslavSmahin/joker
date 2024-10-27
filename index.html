@@ -41,34 +41,66 @@
             console.warn("Не найден элемент с ID 'btnMoreWrapper' или 'section2ImgWrapper'.");
         }
 
-        const aboutBook = document.getElementById('btnMoreWrapper');
-        const rules = document.getElementById('btnMoreWrapper');
-        const aboutAuthor = document.getElementById('btnMoreWrapper');
-        const buy = document.getElementById('btnMoreWrapper');
-        const questionsAnswers = document.getElementById('btnMoreWrapper');
-        const feedBack = document.getElementById('btnMoreWrapper');
+        document.getElementById('menuList').addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                event.preventDefault();
 
+                const targetId = event.target.id;
 
-        const section3 = document.getElementById('section3');
-        const section4 = document.getElementById('section4');
-        const section5 = document.getElementById('section5');
-        const section6 = document.getElementById('section6');
-        const footer = document.getElementById('footer');
+                let sectionId;
+                switch (targetId) {
+                    case 'aboutBook':
+                        sectionId = 'section2';
+                        break;
+                    case 'rules':
+                        sectionId = 'section3';
+                        break;
+                    case 'aboutAuthor':
+                        sectionId = 'section4';
+                        break;
+                    case 'buy':
+                        sectionId = 'toBuy';
+                        break;
+                    case 'questionsAnswers':
+                        sectionId = 'section6';
+                        break;
+                    case 'feedBack':
+                        sectionId = 'footer';
+                        break;
+                    default:
+                        console.warn('Неизвестный элемент меню:', targetId);
+                        return;
+                }
+                const menu = document.getElementById("burgerMenu");
+                const btn = document.getElementById('toggleBtn');
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                } if (menu) {
+                    menu.classList.remove("open");
+                    btn.src = 'images/Vector11.png';
+                    btn.style.position = 'static';
+                }else {
+                    console.warn(`Секция с ID "${sectionId}" не найдена.`);
+                }
+            }
+        });
+
     });
 
 
 </script>
 <div class="burger-menu" id="burgerMenu">
     <ul class="menu-list" id="menuList">
-        <li id="aboutBook"><a href="#">О книге</a></li>
-        <li id="rules"><a href="#">Правила</a></li>
-        <li id="aboutAuthor"><a href="#">Об авторе</a></li>
-        <li id="buy"><a href="#">Покупка</a></li>
-        <li id="questionsAnswers"><a href="#">Вопросы и ответы</a></li>
-        <li id="feedBack"><a href="#">Обратная связь</a></li>
+        <li ><a id="aboutBook" href="#">О книге</a></li>
+        <li ><a id="rules" href="#">Правила</a></li>
+        <li ><a id="aboutAuthor" href="#">Об авторе</a></li>
+        <li ><a id="buy" href="#">Покупка</a></li>
+        <li ><a id="questionsAnswers" href="#">Вопросы и ответы</a></li>
+        <li ><a id="feedBack" href="#">Обратная связь</a></li>
     </ul>
 </div>
-<section class="section1">
+<section class="section1" id="section1">
     <div class="sectionContentWrapper">
         <header>
             <div class="headerContainer">
@@ -135,7 +167,7 @@
         </div>
     </div>
 </section>
-<section class="section3">
+<section class="section3" id="section3">
     <div class="sectionContentWrapper">
         <div class="section3Title">
             <h3>ВНИМАНИЕ!</h3>
@@ -184,7 +216,7 @@
         </div>
     </div>
 </section>
-<section class="section4">
+<section class="section4" id="section4">
     <div class="sectionContentWrapper">
         <div class="section4PhotoWrapper">
             <img class="section4Photo1" src="images/Vector7.png" alt="img">
@@ -207,7 +239,7 @@
 
     </div>
 </section>
-<section class="section5">
+<section class="section5" id="section5">
     <div class="sectionContentWrapper">
         <div class="section5Content">
             <div class="section5ContentTextWrapper">
@@ -219,7 +251,7 @@
                 </p>
                 <div class="section5ContentBtnWrapper">
                     <img src="images/Vector8.png" alt="img">
-                    <a class="section5ContentBtnWrapperLink" href="#" target="_blank">Cвяжитесь с нами для
+                    <a id="toBuy" class="section5ContentBtnWrapperLink" href="#" target="_blank">Cвяжитесь с нами для
                         предзаказа</a>
                 </div>
             </div>
@@ -234,7 +266,7 @@
         </div>
     </div>
 </section>
-<section class="section6">
+<section class="section6" id="section6">
     <div class="sectionContentWrapper">
         <div class="section6TextContent">
             <div class="section6TextContentTitle">
@@ -292,7 +324,7 @@
         </div>
     </div>
 </section>
-<footer>
+<footer id="footer">
     <div class=" sectionContentWrapper">
         <div class="footerLinks">
             <p>CЛУЖБА ПОДДЕРЖКИ:</p>
