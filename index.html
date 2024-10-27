@@ -29,16 +29,43 @@
             btn.style.position = 'static';
         }
     }
+    document.addEventListener('DOMContentLoaded', () => {
+        const btnMore = document.getElementById('btnMoreWrapper');
+        const section2 = document.getElementById('section2');
+
+        if (btnMore && section2) {
+            btnMore.addEventListener('click', () => {
+                section2.scrollIntoView({ behavior: 'smooth' });
+            });
+        } else {
+            console.warn("Не найден элемент с ID 'btnMoreWrapper' или 'section2ImgWrapper'.");
+        }
+
+        const aboutBook = document.getElementById('btnMoreWrapper');
+        const rules = document.getElementById('btnMoreWrapper');
+        const aboutAuthor = document.getElementById('btnMoreWrapper');
+        const buy = document.getElementById('btnMoreWrapper');
+        const questionsAnswers = document.getElementById('btnMoreWrapper');
+        const feedBack = document.getElementById('btnMoreWrapper');
+
+
+        const section3 = document.getElementById('section3');
+        const section4 = document.getElementById('section4');
+        const section5 = document.getElementById('section5');
+        const section6 = document.getElementById('section6');
+        const footer = document.getElementById('footer');
+    });
+
 
 </script>
 <div class="burger-menu" id="burgerMenu">
     <ul class="menu-list" id="menuList">
-        <li><a href="#link1">О книге</a></li>
-        <li><a href="#link2">Правила</a></li>
-        <li><a href="#link3">Об авторе</a></li>
-        <li><a href="#link4">Покупка</a></li>
-        <li><a href="#link5">Вопросы и ответы</a></li>
-        <li><a href="#link6">Обратная связь</a></li>
+        <li id="aboutBook"><a href="#">О книге</a></li>
+        <li id="rules"><a href="#">Правила</a></li>
+        <li id="aboutAuthor"><a href="#">Об авторе</a></li>
+        <li id="buy"><a href="#">Покупка</a></li>
+        <li id="questionsAnswers"><a href="#">Вопросы и ответы</a></li>
+        <li id="feedBack"><a href="#">Обратная связь</a></li>
     </ul>
 </div>
 <section class="section1">
@@ -71,8 +98,8 @@
                 <h2>ДЖОКЕР</h2>
                 <h1>Настоящая политическая биография Владимира Зеленского</h1>
             </div>
-            <div class="btnMoreWrapper">
-                <a href="#section2" class="btnMore">ПОДРОБНЕЕ</a>
+            <div class="btnMoreWrapper" id="btnMoreWrapper">
+                <a href="#" class="btnMore">ПОДРОБНЕЕ</a>
                 <img class="headerImgArrow" src="images/Vector3.png" alt="">
             </div>
         </div>
@@ -81,7 +108,7 @@
 
 <section class="section2" id="section2">
     <div class="sectionContentWrapper">
-        <div class="section2ImgWrapper">
+        <div class="section2ImgWrapper" id="section2ImgWrapper">
             <img class="section2ImgWrapperImg1" src="images/Vector4.png" alt="">
             <img class="section2ImgWrapperImg2" src="images/BookMockup1.png" alt="">
         </div>
@@ -91,7 +118,7 @@
             </h3>
             <h2>ДЖОКЕР</h2>
             <h4>Настоящая биография Владимира Зеленского</h4>
-            <img class="" src="images/Vector5.png" alt="">
+            <img class="section2TextArrow" src="images/Vector5.png" alt="">
             <p>В книге раскрывается не только политический и психологический
                 портрет нынешнего президента Украины. Автор исследует
                 политические процессы 10 20-х годов XXI века: Майдан,
@@ -236,6 +263,7 @@
             </div>
         </div>
         <div class="formWrapper">
+            <img class="formTitleImg" src="images/IMG_9283.png" alt="img">
             <form>
                 <h3 class="formTitle">ЗДЕСЬ ВЫ МОЖЕТЕ НАПИСАТЬ РЕЦЕНЗИИ, ПОЖЕЛАНИЯ И КРИТИЧЕСКИЕ ЗАМЕЧАНИЯ АВТОРУ.
                 </h3>
@@ -247,7 +275,7 @@
                 <input type="text" id="mail" name="mail" class="mailInput" placeholder="Адрес электронной почты*"
                        required>
                 <label for="text"></label>
-                <input type="text" id="text" name="text" class="textInput" placeholder="Адрес электронной почты*"
+                <input type="text" id="text" name="text" class="textInput" placeholder="Ваш комментарий*"
                        required>
                 <div class="section6FormBtnWrapper">
                     <div class="checkboxInputWrapper">

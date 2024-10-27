@@ -73,16 +73,17 @@ html .sectionContentWrapper {
 }
 html .section1 {
   padding: 41px 0 0 0;
+  background-color: black;
   background-image: url("images/hero_banner.png");
-  background-size: cover;
-  background-position: center;
   width: 100%;
-  height: 100vh;
+  background-position: bottom;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 @media (min-width: 360px) and (max-width: 768px) {
   html .section1 {
     background-image: url("images/hero_banner2.png");
+    padding: 10px 0 0 0;
   }
 }
 html .section1 .headerContainer {
@@ -90,6 +91,11 @@ html .section1 .headerContainer {
   justify-content: space-between;
   padding-bottom: 100px;
   align-items: center;
+}
+@media (min-width: 360px) and (max-width: 1440px) {
+  html .section1 .headerContainer {
+    padding-bottom: 30px;
+  }
 }
 html .section1 .headerContainer h2 {
   font-size: 36px;
@@ -234,6 +240,11 @@ html .section2 {
   width: 100%;
   padding: 120px 0;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section2 {
+    padding: 60px 0;
+  }
+}
 html .section2 .sectionContentWrapper {
   display: flex;
 }
@@ -311,6 +322,13 @@ html .section2 .sectionContentWrapper .section2TextWrapper h3 {
 @media (min-width: 360px) and (max-width: 1024px) {
   html .section2 .sectionContentWrapper .section2TextWrapper h3 {
     font-size: calc(18px + 14 * (100vw - 360px) / 664);
+    padding-bottom: 16px;
+  }
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section2 .sectionContentWrapper .section2TextWrapper .section2TextArrow {
+    max-width: 240px;
+    padding-bottom: 20px;
   }
 }
 html .section2 .sectionContentWrapper .section2TextWrapper h2 {
@@ -334,6 +352,11 @@ html .section2 .sectionContentWrapper .section2TextWrapper p {
     font-size: calc(16px + 2 * (100vw - 360px) / 664);
   }
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section2 .sectionContentWrapper .section2TextWrapper p {
+    padding-bottom: 40px;
+  }
+}
 html .section3 {
   background-image: url("images/section3back.png");
   background-size: cover;
@@ -341,6 +364,11 @@ html .section3 {
   width: 100%;
   background-repeat: no-repeat;
   padding: 120px 0;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section3 {
+    padding: 60px 0;
+  }
 }
 html .section3 .sectionContentWrapper {
   display: flex;
@@ -478,6 +506,23 @@ html .section4 .sectionContentWrapper .section4PhotoWrapper {
     order: 2;
   }
 }
+@media (min-width: 360px) and (max-width: 1440px) {
+  html .section4 .sectionContentWrapper .section4PhotoWrapper a {
+    font-size: 16px;
+  }
+}
+html .section4 .sectionContentWrapper .section4PhotoWrapper a::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 52px;
+  width: 45%;
+  height: 10%;
+  background-image: url(images/line.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
 html .section4 .sectionContentWrapper .section4PhotoWrapper .section4Photo1 {
   position: absolute;
   left: -90px;
@@ -506,6 +551,12 @@ html .section4 .sectionContentWrapper .section4PhotoWrapper .section4ContentBtnW
   right: 0;
   z-index: 2;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section4 .sectionContentWrapper .section4PhotoWrapper .section4ContentBtnWrapper {
+    bottom: 20px;
+    left: 30px;
+  }
+}
 html .section4 .sectionContentWrapper .section4PhotoWrapper .section4ContentBtnWrapper img {
   margin-right: 5px;
 }
@@ -528,6 +579,11 @@ html .section4 .sectionContentWrapper .section4ContentText h5 {
   font-size: 24px;
   margin-bottom: 24px;
   font-weight: bold;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section4 .sectionContentWrapper .section4ContentText h5 {
+    font-size: 18px;
+  }
 }
 html .section4 .sectionContentWrapper .section4ContentText p {
   font-size: 18px;
@@ -601,6 +657,12 @@ html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapp
 html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper .section5ContentBtnWrapper .section5ContentBtnWrapperLink {
   position: relative;
   display: block;
+}
+@media (min-width: 360px) and (max-width: 1440px) {
+  html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper .section5ContentBtnWrapper .section5ContentBtnWrapperLink {
+    font-size: 16px;
+    margin-bottom: 44px;
+  }
 }
 html .section5 .sectionContentWrapper .section5Content .section5ContentTextWrapper .section5ContentBtnWrapper .section5ContentBtnWrapperLink::after {
   content: "";
@@ -756,6 +818,12 @@ html .section6 .sectionContentWrapper .section6TextContent .section6ContentCart2
 }
 html .section6 .sectionContentWrapper .formWrapper {
   max-width: 500px;
+  position: relative;
+}
+html .section6 .sectionContentWrapper .formWrapper .formTitleImg {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 html .section6 .sectionContentWrapper .formWrapper form {
   display: flex;
@@ -808,12 +876,17 @@ html .section6 .sectionContentWrapper .formWrapper form .section6FormBtnWrapper 
   display: flex;
 }
 html .section6 .sectionContentWrapper .formWrapper form .section6FormBtnWrapper .checkboxInputWrapper .checkboxInput {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 html .section6 .sectionContentWrapper .formWrapper form .section6FormBtnWrapper .checkboxInputWrapper p {
   color: #754B4D;
   max-width: 211px;
   font-size: 14px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html .section6 .sectionContentWrapper .formWrapper form .section6FormBtnWrapper .checkboxInputWrapper p {
+    font-size: 10px;
+  }
 }
 html .section6 .sectionContentWrapper .formWrapper form .section6FormBtnWrapper .btnWrapper {
   position: relative;
@@ -822,7 +895,7 @@ html .section6 .sectionContentWrapper .formWrapper form .section6FormBtnWrapper 
   background: none;
   border: none;
   outline: none;
-  color: #556DD9;
+  color: #FFFFFF;
   width: 100%;
   font-size: 18px;
   position: absolute;
@@ -854,6 +927,9 @@ html footer .sectionContentWrapper .footerLinks {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+  }
+  html footer .sectionContentWrapper .footerLinks a {
+    font-size: 16px;
   }
 }
 html footer .sectionContentWrapper .footerLinks p {

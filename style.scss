@@ -83,14 +83,15 @@ html {
 
   .section1 {
     padding: 41px 0 0 0;
+    background-color: black;
     background-image: url("images/hero_banner.png");
-    background-size: cover;
-    background-position: center;
     width: 100%;
-    height: 100vh;
+    background-position: bottom;
+    background-size: contain;
     background-repeat: no-repeat;
     @media (min-width: 360px) and (max-width: 768px) {
       background-image: url("images/hero_banner2.png");
+      padding: 10px 0 0 0;
     }
 
     .headerContainer {
@@ -98,6 +99,9 @@ html {
       justify-content: space-between;
       padding-bottom: 100px;
       align-items: center;
+      @media (min-width: 360px) and (max-width: 1440px) {
+        padding-bottom: 30px;
+      }
 
       h2 {
         font-size: 36px;
@@ -239,7 +243,9 @@ html {
     background: linear-gradient(to right, #040404, #370406);
     width: 100%;
     padding: 120px 0;
-
+    @media (min-width: 360px) and (max-width: 768px) {
+      padding: 60px 0;
+    }
 
     .sectionContentWrapper {
       display: flex;
@@ -301,6 +307,14 @@ html {
           }
           @media (min-width: 360px) and (max-width: 1024px) {
             font-size: calc(18px + (32 - 18) * ((100vw - 360px) / (1024 - 360)));
+            padding-bottom: 16px;
+          }
+        }
+
+        .section2TextArrow {
+          @media (min-width: 360px) and (max-width: 768px) {
+            max-width: 240px;
+            padding-bottom: 20px;
           }
         }
 
@@ -315,6 +329,7 @@ html {
         h4 {
           font-size: 22px;
           font-weight: bold;
+
         }
 
         p {
@@ -323,6 +338,9 @@ html {
 
           @media (min-width: 360px) and (max-width: 1024px) {
             font-size: calc(16px + (18 - 16) * ((100vw - 360px) / (1024 - 360)));
+          }
+          @media (min-width: 360px) and (max-width: 768px) {
+            padding-bottom: 40px;
           }
         }
       }
@@ -336,6 +354,9 @@ html {
     width: 100%;
     background-repeat: no-repeat;
     padding: 120px 0;
+    @media (min-width: 360px) and (max-width: 768px) {
+      padding: 60px 0;
+    }
 
     .sectionContentWrapper {
       display: flex;
@@ -473,6 +494,25 @@ html {
           order: 2;
         }
 
+        a {
+          @media (min-width: 360px) and (max-width: 1440px) {
+            font-size: 16px;
+          }
+        }
+
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 7px;
+          left: 52px;
+          width: 45%;
+          height: 10%;
+          background-image: url(images/line.png);
+          background-size: cover;
+          background-position: center;
+          z-index: 0;
+        }
+
         .section4Photo1 {
           position: absolute;
           left: -90px;
@@ -499,6 +539,10 @@ html {
           bottom: 50px;
           right: 0;
           z-index: 2;
+          @media (min-width: 360px) and (max-width: 768px) {
+            bottom: 20px;
+            left: 30px;
+          }
 
           img {
             margin-right: 5px;
@@ -524,6 +568,9 @@ html {
           font-size: 24px;
           margin-bottom: 24px;
           font-weight: bold;
+          @media (min-width: 360px) and (max-width: 768px) {
+            font-size: 18px;
+          }
         }
 
         p {
@@ -598,6 +645,11 @@ html {
             .section5ContentBtnWrapperLink {
               position: relative;
               display: block;
+              @media (min-width: 360px) and (max-width: 1440px) {
+                font-size: 16px;
+                margin-bottom: 44px;
+              }
+
             }
 
             .section5ContentBtnWrapperLink::after {
@@ -679,6 +731,7 @@ html {
       padding-bottom: calc(60px + (120 - 60) * ((100vw - 360px) / (768 - 360)));
       padding-top: calc(60px + (120 - 60) * ((100vw - 360px) / (768 - 360)));
     }
+
     .sectionContentWrapper {
       display: flex;
       justify-content: space-between;
@@ -752,6 +805,7 @@ html {
               font-size: calc(18px + (24 - 18) * ((100vw - 360px) / (768 - 360)));
 
             }
+
             img {
               margin-right: 16px;
             }
@@ -765,6 +819,13 @@ html {
 
       .formWrapper {
         max-width: 500px;
+        position: relative;
+
+        .formTitleImg {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
 
         form {
           display: flex;
@@ -821,13 +882,16 @@ html {
               display: flex;
 
               .checkboxInput {
-                margin-right: 5px;
+                margin-right: 10px;
               }
 
               p {
                 color: #754B4D;
                 max-width: 211px;
                 font-size: 14px;
+                @media (min-width: 360px) and (max-width: 768px) {
+                  font-size: 10px;
+                }
               }
             }
 
@@ -838,7 +902,7 @@ html {
                 background: none;
                 border: none;
                 outline: none;
-                color: #556DD9;
+                color: #FFFFFF;
                 width: 100%;
                 font-size: 18px;
                 position: absolute;
@@ -857,6 +921,7 @@ html {
     width: 100%;
     padding: 26px 0;
 
+
     .sectionContentWrapper {
       display: flex;
       justify-content: space-between;
@@ -873,7 +938,11 @@ html {
           flex-direction: column;
           align-items: center;
           margin-bottom: 20px;
+          a {
+            font-size: 16px;
+          }
         }
+
         p {
           color: #754B4D;
         }
